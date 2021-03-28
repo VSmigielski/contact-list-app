@@ -130,12 +130,7 @@ class App extends Component {
       return
     }
 
-    fetch(SERVICE_URL + '/contact/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(this.state.newContactData),
+    fetch(SERVICE_URL + '/contact/', { method: 'POST', headers: { 'Content-Type': 'application/json', }, body: JSON.stringify(this.state.newContactData),
     })
       .then(response => response.json())
       .then(data => {
